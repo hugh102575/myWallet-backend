@@ -1,0 +1,54 @@
+[2025-08-08 07:15:02] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:224)
+[stacktrace]
+#0 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve(NULL, NULL)
+#1 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get(NULL)
+#2 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(693): Illuminate\\Log\\LogManager->driver()
+#3 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(375): Illuminate\\Log\\LogManager->error('array_merge(): ...', Array)
+#4 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(336): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable(Object(TypeError))
+#5 /Users/dannyhsu/Laravel/myWallet-backend/app/Exceptions/Handler.php(37): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(TypeError))
+#6 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): App\\Exceptions\\Handler->report(Object(TypeError))
+#7 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException(Object(TypeError))
+#8 /Users/dannyhsu/Laravel/myWallet-backend/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#9 /Users/dannyhsu/.composer/vendor/laravel/valet/server.php(110): require('/Users/dannyhsu...')
+#10 {main}
+"} 
+[2025-08-08 07:15:02] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:94)
+[stacktrace]
+#0 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(94): array_merge(Array, 1)
+#1 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(72): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile(Object(Illuminate\\Config\\Repository), 'cors', '/Users/dannyhsu...', Array)
+#2 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
+#3 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(309): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
+#4 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#5 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#7 /Users/dannyhsu/Laravel/myWallet-backend/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#8 /Users/dannyhsu/.composer/vendor/laravel/valet/server.php(110): require('/Users/dannyhsu...')
+#9 {main}
+"} 
+[2025-08-08 07:15:02] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:224)
+[stacktrace]
+#0 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve(NULL, NULL)
+#1 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get(NULL)
+#2 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(693): Illuminate\\Log\\LogManager->driver()
+#3 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(375): Illuminate\\Log\\LogManager->error('array_merge(): ...', Array)
+#4 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(336): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable(Object(TypeError))
+#5 /Users/dannyhsu/Laravel/myWallet-backend/app/Exceptions/Handler.php(37): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(TypeError))
+#6 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(497): App\\Exceptions\\Handler->report(Object(TypeError))
+#7 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException(Object(TypeError))
+#8 /Users/dannyhsu/Laravel/myWallet-backend/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#9 /Users/dannyhsu/.composer/vendor/laravel/valet/server.php(110): require('/Users/dannyhsu...')
+#10 {main}
+"} 
+[2025-08-08 07:15:02] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:94)
+[stacktrace]
+#0 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(94): array_merge(Array, 1)
+#1 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(72): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile(Object(Illuminate\\Config\\Repository), 'cors', '/Users/dannyhsu...', Array)
+#2 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
+#3 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(309): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
+#4 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#5 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /Users/dannyhsu/Laravel/myWallet-backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#7 /Users/dannyhsu/Laravel/myWallet-backend/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#8 /Users/dannyhsu/.composer/vendor/laravel/valet/server.php(110): require('/Users/dannyhsu...')
+#9 {main}
+"} 
