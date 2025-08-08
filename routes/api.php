@@ -14,3 +14,4 @@ Route::post('/getTokenPrice', [Web3Controller::class, 'getTokenPrice']);
 Route::post('/getUserTokens', [Web3Controller::class, 'getUserTokens']);
 Route::post('/addUserToken', [Web3Controller::class, 'addUserToken']);
 Route::post('/manageToken', [Web3Controller::class, 'manageToken']);
+Route::post('/awake', [Web3Controller::class, 'awake']);

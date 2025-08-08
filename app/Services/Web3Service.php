@@ -173,6 +173,13 @@ class Web3Service
         ]);
     }
 
+    public function awake(Request $request): JsonResponse
+    {
+        return response()->json([
+            'resCode' => ErrorCode::SUCCESS,
+        ]);
+    }
+
     private function defaultError($resCode = null): JsonResponse
     {
         return response()->json([
