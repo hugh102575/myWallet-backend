@@ -45,6 +45,11 @@ class Web3Controller extends Controller
         return $this->web3Service->manageToken($request);
     }
 
+    public function removeToken(Request $request): JsonResponse
+    {
+        return $this->web3Service->removeToken($request);
+    }
+
     public function awake(Request $request): JsonResponse
     {
         return $this->web3Service->awake($request);

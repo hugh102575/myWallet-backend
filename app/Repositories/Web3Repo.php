@@ -62,4 +62,16 @@ class Web3Repo
             }
         }
     }
+
+    public function removeToken(array $data): mixed
+    {
+        $record = UserAddedTokens::where([
+            'account' => $data['account'],
+            'id' => $data['tokenId'],
+        ])->first();
+        if (!$record) {
+            return false;
+        }
+        return $record->delete();
+    }
 }

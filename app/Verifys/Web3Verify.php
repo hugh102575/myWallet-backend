@@ -50,4 +50,13 @@ class Web3Verify
         ];
         return Validator::make($data, $rules)->passes();
     }
+
+    public function removeToken(array $data): bool
+    {
+        $rules = [
+            'account' => 'required|string',
+            'tokenId' => 'required|numeric'
+        ];
+        return Validator::make($data, $rules)->passes();
+    }
 }

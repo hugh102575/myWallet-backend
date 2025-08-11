@@ -173,6 +173,21 @@ class Web3Service
         ]);
     }
 
+    public function removeToken(Request $request): JsonResponse
+    {
+        if (!$this->web3Verify->removeToken($request->all())) {
+            return $this->defaultError(ErrorCode::PARAM_ERROR);
+        }
+
+        if (!$this->web3Repo->removeToken($request->all())) {
+            return $this->defaultError(ErrorCode::DB_QUERY_ERROR);
+        }
+
+        return response()->json([
+            'resCode' => ErrorCode::SUCCESS,
+        ]);
+    }
+
     public function awake(Request $request): JsonResponse
     {
         return response()->json([
