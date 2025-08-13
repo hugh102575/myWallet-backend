@@ -15,6 +15,8 @@ class Web3Service
     protected $web3Verify;
     private $defillamaPricesCurrentApi;
     private $defillamaPercentageApi;
+    private $binanceTickerPriceApi;
+    private $binanceTicker24hrApi;
 
     public function __construct(Web3Repo $web3Repo, Web3Verify $web3Verify)
     {
@@ -22,6 +24,8 @@ class Web3Service
         $this->web3Verify = $web3Verify;
         $this->defillamaPricesCurrentApi = 'https://coins.llama.fi/prices/current/';
         $this->defillamaPercentageApi = 'https://coins.llama.fi/percentage/';
+        $this->binanceTickerPriceApi = 'https://api.binance.com/api/v3/ticker/price';
+        $this->binanceTicker24hrApi = 'https://api.binance.com/api/v3/ticker/24hr';
     }
 
     public function getNetworkInfo(Request $request): JsonResponse
@@ -123,6 +127,30 @@ class Web3Service
         return response()->json([
             'resCode' => ErrorCode::SUCCESS,
             'userTokens' => $this->web3Repo->getUserTokens($account, $chainId),
+        ]);
+    }
+
+    public function getMarketPrice(Request $request): JsonResponse
+    {
+        if (!$this->web3Verify->getMarketPrice($request->all())) {
+            return $this->defaultError(ErrorCode::PARAM_ERROR);
+        }
+
+        $account = !empty($request->input('account')) ? $request->input('account') : null;
+        $marketList = $this->web3Repo->defaultMarketList();
+        $marketList = urlencode(json_encode($marketList));
+        $responseMarketPrice = Http::get($this->binanceTickerPriceApi . '?symbols=' . $marketList);
+        $responseMarket24hr = Http::get($this->binanceTicker24hrApi . '?symbols=' . $marketList);
+        if (!$responseMarketPrice->successful() || !$responseMarket24hr->successful()) {
+            return $this->defaultError(ErrorCode::API_ERROR);
+        }
+        $responseMarketPrice = $responseMarketPrice->json();
+        $responseMarket24hr = $responseMarket24hr->json();
+
+        return response()->json([
+            'resCode' => ErrorCode::SUCCESS,
+            'marketPrice' => $responseMarketPrice,
+            'market24hr' => $responseMarket24hr,
         ]);
     }
 

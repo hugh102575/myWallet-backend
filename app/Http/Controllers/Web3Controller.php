@@ -35,6 +35,11 @@ class Web3Controller extends Controller
         return $this->web3Service->getUserTokens($request);
     }
 
+    public function getMarketPrice(Request $request): JsonResponse
+    {
+        return $this->web3Service->getMarketPrice($request);
+    }
+
     public function addUserToken(Request $request): JsonResponse
     {
         return $this->web3Service->addUserToken($request);

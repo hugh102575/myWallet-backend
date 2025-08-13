@@ -32,6 +32,14 @@ class Web3Verify
         return Validator::make($data, $rules)->passes();
     }
 
+    public function getMarketPrice(array $data): bool
+    {
+        $rules = [
+            'account' => 'nullable|string',
+        ];
+        return Validator::make($data, $rules)->passes();
+    }
+
     public function addUserToken(array $data): bool
     {
         $rules = [

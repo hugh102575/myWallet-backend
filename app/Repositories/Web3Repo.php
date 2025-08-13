@@ -74,4 +74,20 @@ class Web3Repo
         }
         return $record->delete();
     }
+
+    public function defaultMarketList(): array
+    {
+        return [
+            'BTCUSDT',
+            'ETHUSDT',
+            'BNBUSDT',
+            'SOLUSDT',
+            'XRPUSDT',
+            'ADAUSDT',
+            'DOGEUSDT',
+            'LTCUSDT',
+            'AVAXUSDT',
+            'DOTUSDT',
+        ];
+    }
 }
